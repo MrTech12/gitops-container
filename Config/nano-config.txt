@@ -1,0 +1,8 @@
+# display Line Numbers
+set linenumbers
+
+# Enable Mouse Navigation
+set mouse
+
+# Enable Word Wrapping
+set softwrap

@@ -1,0 +1,27 @@
+# Change prefix from 'Ctrl+b' to 'Alt+b'
+
+unbind C-b
+set-option -g prefix M-b
+bind-key M-b send-prefix
+
+# Enable mouse mode
+set -g mouse on
+
+# Splitting terminals from '"' and '%' to '|' and '-'
+unbind '"'
+unbind %
+bind | split-window -h
+bind - split-window -v
+
+# Switch panes using Ctrl-arrow
+bind -n C-Left select-pane -L
+bind -n C-Right select-pane -R
+bind -n C-Up select-pane -U
+bind -n C-Down select-pane -D
+
+# Start counting pane and window number at 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Renumber windows when the amount is changed
+set -g renumber-windows on
