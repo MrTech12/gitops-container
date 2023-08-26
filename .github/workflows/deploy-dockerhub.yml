@@ -1,0 +1,24 @@
+name: "Deploy to DockerHub"
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+        description: "version of docker image"
+
+jobs:
+  build-push-docker:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: "checkout project code"
+      uses: actions/checkout@v2
+
+    - name: "Login into DockerHub"
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: "build Docker image"
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/gitops-container:${{ inputs.version }} .
+
+    - name: "Push Docker image"
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/gitops-container:${{ inputs.version }}
