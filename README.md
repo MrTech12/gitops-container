@@ -13,9 +13,9 @@ Instead of putting the tools on a local machine, another option would be to use 
 The GitHub project has the ability to push a new Docker image to DockerHub, whenever the maintainer chooses (tool updates, extra configs, etc.).
 One can write a docker command to pull and use the container that way. There is also a docker-compose file available, which allows for an easier setup process. One can use the following command to work with the compose file:
 ```yml
-docker compose -f docker-compose.gitopscontainer.yml up -d # pulling and starting the container in the background.
-docker compose -f docker-compose.gitopscontainer.yml exec gitopscontainer sh # accessing the container via the 'sh' shell.
-docker compose -f docker-compose.gitopscontainer.yml down # stopping and deleting the container.
+docker compose -f docker-compose.gitopscontainer.yml up -d # starting the container in the background
+docker compose -f docker-compose.gitopscontainer.yml exec gitopscontainer sh # accessing the container
+docker compose -f docker-compose.gitopscontainer.yml down # stopping and deleting the container
 
 ```
 
