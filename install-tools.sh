@@ -12,7 +12,7 @@ printf "Message: Executing script to install GitOps tools \n\n"
 
 ## essential tools
 printf "Message: Installing essential tools \n\n"
-apk add --no-cache curl nano tmux
+apk add --no-cache curl nano tmux yq openssl
 
 printf "Message: Configuring nano & tmux \n\n"
 touch ~/.nanorc

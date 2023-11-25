@@ -23,6 +23,8 @@ docker compose -f docker-compose.gitopscontainer.yml down # stopping and deletin
 - curl
 - nano
 - tmux
+- yq
+- openssl
 - kubectl
 - helm
 - ArgoCD CLI
