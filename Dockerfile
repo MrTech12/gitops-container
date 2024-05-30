@@ -1,7 +1,7 @@
 FROM alpine:3.20.0
 
 COPY install-tools.sh ./install-tools.sh
-COPY /config /config
+COPY /configs /configs
 
 RUN chmod +x ./install-tools.sh
 

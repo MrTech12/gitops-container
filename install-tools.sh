@@ -17,9 +17,9 @@ apk add --no-cache curl nano tmux yq openssl
 
 printf "Message: Configuring nano & tmux \n\n"
 touch ~/.nanorc
-cat config/nano-config.txt >> ~/.nanorc # Add custom nano config to user nanorc
+cat configs/nano-config.txt >> ~/.nanorc # Add custom nano config to user nanorc
 touch ~/.tmux.conf
-cat config/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conff
+cat configs/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conff
 
 ## kubectl
 printf "Message: Installing kubectl \n\n"
