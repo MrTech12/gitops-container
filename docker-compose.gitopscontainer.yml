@@ -2,7 +2,7 @@ version: "2.20.2"
 
 services:
   gitopscontainer:
-    image: mrtech12/gitops-container:2.1
+    image: mrtech12/gitops-container:2.2
     container_name: gitops-container
     working_dir: /work
     volumes:
