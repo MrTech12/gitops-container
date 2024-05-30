@@ -1,12 +1,13 @@
 #!/bin/sh
 
-HELM_VERSION=3.13.2
-ARGO_CD_VERSION=2.9.2
-ARGO_ROLLOUTS_VERSION=1.6.2
-TF_VERSION=1.6.4
-DOCTL_VERSION=1.100.0
-PULUMI_VERSION=3.94.2
-DAPR_VERSION=1.12.0
+HELM_VERSION=3.15.1
+ARGO_CD_VERSION=2.11.2
+ARGO_ROLLOUTS_VERSION=1.6.6
+TF_VERSION=1.8.4
+OPEN_TOFU_VERSION=1.7.1
+DOCTL_VERSION=1.107.0
+PULUMI_VERSION=3.117.0
+DAPR_VERSION=1.13.0
 
 printf "Message: Executing script to install GitOps tools \n\n"
 
@@ -16,9 +17,9 @@ apk add --no-cache curl nano tmux yq openssl
 
 printf "Message: Configuring nano & tmux \n\n"
 touch ~/.nanorc
-cat Config/nano-config.txt >> ~/.nanorc # Add custom nano config to user nanorc
+cat config/nano-config.txt >> ~/.nanorc # Add custom nano config to user nanorc
 touch ~/.tmux.conf
-cat Config/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conff
+cat config/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conff
 
 ## kubectl
 printf "Message: Installing kubectl \n\n"
@@ -55,6 +56,14 @@ unzip /tmp/terraform.zip
 mv terraform /usr/local/bin
 rm -r /tmp/terraform.zip
 chmod +x /usr/local/bin/terraform
+
+## OpenTofu
+printf "Message: Installing OpenTofu \n\n"
+curl -o /tmp/tofu.zip -LO https://github.com/opentofu/opentofu/releases/download/v$OPEN_TOFU_VERSION/tofu_${OPEN_TOFU_VERSION}_linux_amd64.zip
+unzip /tmp/tofu.zip
+mv tofu /usr/local/bin
+rm -r /tmp/tofu.zip
+chmod +x /usr/local/bin/tofu
 
 ## DigitalOcean CLI (doctl)
 printf "Message: Installing DigitalOcean CLI (doctl) \n\n"

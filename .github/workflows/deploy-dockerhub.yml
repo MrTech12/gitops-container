@@ -22,3 +22,8 @@ jobs:
 
     - name: "Push Docker image"
       run: docker push ${{ secrets.DOCKER_USERNAME }}/gitops-container:${{ inputs.version }}
+
+    - name: "Tag commit and push"
+      run: |
+        git tag ${{ inputs.version }}
+        git push --tags
