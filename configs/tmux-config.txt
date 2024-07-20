@@ -1,8 +1,10 @@
-# Change prefix from 'Ctrl+b' to 'Alt+b'
-
+# Change prefix from 'Ctrl+b' to 'Ctrl+a'
 unbind C-b
-set-option -g prefix M-b
-bind-key M-b send-prefix
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# Reload config file
+bind r source-file ~/.tmux.conf
 
 # Enable mouse mode
 set -g mouse on
@@ -25,3 +27,17 @@ setw -g pane-base-index 1
 
 # Renumber windows when the amount is changed
 set -g renumber-windows on
+
+# Statusbar
+set -g status-right '%d-%m-%Y %H:%M #{tmux_mode_indicator}'
+set -g status-style 'fg=#30ff5c'
+
+# pane borders
+set -g pane-active-border-style 'fg=#0885f4'
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'MunifTanjim/tmux-mode-indicator'
+
+# Initialize TMUX plugin manager
+run '~/.tmux/plugins/tpm/tpm'

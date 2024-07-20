@@ -1,12 +1,12 @@
 #!/bin/sh
 
-HELM_VERSION=3.15.1
-ARGO_CD_VERSION=2.11.2
-ARGO_ROLLOUTS_VERSION=1.6.6
-TF_VERSION=1.8.4
-OPEN_TOFU_VERSION=1.7.1
-DOCTL_VERSION=1.107.0
-PULUMI_VERSION=3.117.0
+HELM_VERSION=3.15.3
+ARGO_CD_VERSION=2.11.5
+ARGO_ROLLOUTS_VERSION=1.7.1
+TF_VERSION=1.9.2
+OPEN_TOFU_VERSION=1.7.3
+DOCTL_VERSION=1.109.1
+PULUMI_VERSION=3.125.0
 DAPR_VERSION=1.13.0
 
 printf "Message: Executing script to install GitOps tools \n\n"
@@ -19,7 +19,7 @@ printf "Message: Configuring nano & tmux \n\n"
 touch ~/.nanorc
 cat configs/nano-config.txt >> ~/.nanorc # Add custom nano config to user nanorc
 touch ~/.tmux.conf
-cat configs/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conff
+cat configs/tmux-config.txt >> ~/.tmux.conf # Add custom tmux config to user tmux.conf
 
 ## kubectl
 printf "Message: Installing kubectl \n\n"
