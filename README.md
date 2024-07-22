@@ -31,6 +31,8 @@ docker compose -f docker-compose.gitopscontainer.yml down # stopping and deletin
 - Argo Rollouts kubectl plugin
 - Terraform CLI
 - OpenTofu (fork of Terraform CLI)
-- DigitalOcean CLI (doctl)
 - Pulumi CLI
 - Dapr CLI
+- Cilium CLI
+- Hubble CLI
+- DigitalOcean CLI (doctl)
