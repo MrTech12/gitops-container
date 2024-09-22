@@ -1,6 +1,6 @@
 services:
   gitopscontainer:
-    image: mrtech12/gitops-container:2.4
+    image: mrtech12/gitops-container:2.6
     container_name: gitops-container
     working_dir: /work
     volumes:
