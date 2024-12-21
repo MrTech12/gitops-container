@@ -20,19 +20,20 @@ docker compose -f docker-compose.gitopscontainer.yml down # stopping and deletin
 ```
 
 ## Bundled tools
+- [alpine](https://hub.docker.com/_/alpine/tags)
 - curl
 - nano
 - tmux
 - yq
 - openssl
 - kubectl
-- helm
-- ArgoCD CLI
-- Argo Rollouts kubectl plugin
-- Terraform CLI
-- OpenTofu (fork of Terraform CLI)
-- Pulumi CLI
-- Dapr CLI
-- Cilium CLI
-- Hubble CLI
-- DigitalOcean CLI (doctl)
+- [helm](https://github.com/helm/helm/releases)
+- [ArgoCD CLI](https://github.com/argoproj/argo-cd/releases)
+- [Argo Rollouts kubectl plugin](https://github.com/argoproj/argo-rollouts/releases)
+- [Terraform CLI](https://releases.hashicorp.com/terraform)
+- [OpenTofu (fork of Terraform CLI)](https://github.com/opentofu/opentofu/releases)
+- [Pulumi CLI](https://www.pulumi.com/docs/iac/download-install/versions)
+- [Dapr CLI](https://github.com/dapr/cli/releases)
+- [Cilium CLI](https://github.com/cilium/cilium-cli/releases)
+- [Hubble CLI](https://github.com/cilium/hubble/releases)
+- [DigitalOcean CLI (doctl)](https://github.com/digitalocean/doctl/releases)

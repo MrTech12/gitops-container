@@ -1,4 +1,4 @@
-FROM alpine:3.20.3
+FROM alpine:3.21.0
 
 COPY install-tools.sh ./install-tools.sh
 COPY /configs /configs
