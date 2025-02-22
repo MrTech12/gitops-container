@@ -11,13 +11,7 @@ Instead of putting the tools on a local machine, another option would be to use 
 
 ## docker-compose
 The GitHub project has the ability to push a new Docker image to [DockerHub](https://hub.docker.com/repository/docker/mrtech12/gitops-container), whenever the maintainer chooses (tool updates, extra configs, etc.).
-One can write a docker command to pull and use the container that way. There is also a docker-compose file available, which allows for an easier setup process. The following commands can be sued to work with the compose file:
-```bash
-docker compose -f docker-compose.gitopscontainer.yml up -d # starting the container in the background
-docker compose -f docker-compose.gitopscontainer.yml exec gitopscontainer sh # accessing the container
-docker compose -f docker-compose.gitopscontainer.yml down # stopping and deleting the container
-
-```
+One can write a docker command to pull and use the container that way.
 
 ## Bundled tools
 - [alpine](https://hub.docker.com/_/alpine/tags)
@@ -37,3 +31,4 @@ docker compose -f docker-compose.gitopscontainer.yml down # stopping and deletin
 - [Cilium CLI](https://github.com/cilium/cilium-cli/releases)
 - [Hubble CLI](https://github.com/cilium/hubble/releases)
 - [DigitalOcean CLI (doctl)](https://github.com/digitalocean/doctl/releases)
+- [Hetzner CLI (hcloud)](https://github.com/hetznercloud/cli/releases)

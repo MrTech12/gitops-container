@@ -12,6 +12,7 @@ DAPR_VERSION=1.14.1
 CILIUM_VERSION=0.16.21
 HUBBLE_VERSION=1.16.5
 DOCTL_VERSION=1.120.0
+HCLOUD_VERSION=1.50.0
 
 printf "Message: Executing script to install GitOps tools \n\n"
 
@@ -118,3 +119,11 @@ tar -C /tmp/ -zxvf doctl-$DOCTL_VERSION-linux-amd64.tar.gz
 rm doctl-$DOCTL_VERSION-linux-amd64.tar.gz
 mv /tmp/doctl /usr/local/bin/doctl
 chmod +x /usr/local/bin/doctl
+
+### Hetzner CLI (hcloud)
+printf "Message: Installing Hetzner CLI (hcloud) \n\n"
+curl -LO https://github.com/hetznercloud/cli/releases/download/v$HCLOUD_VERSION/hcloud-linux-amd64.tar.gz
+tar -C /tmp/ -zxvf hcloud-linux-amd64.tar.gz
+rm hcloud-linux-amd64.tar.gz
+mv /tmp/hcloud /usr/local/bin/hcloud
+chmod +x /usr/local/bin/hcloud
