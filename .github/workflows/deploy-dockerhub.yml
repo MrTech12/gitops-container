@@ -9,10 +9,10 @@ on:
 
 jobs:
   build-push-docker:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
     - name: "checkout project code"
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6.0.2
 
     - name: "Login into DockerHub"
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
