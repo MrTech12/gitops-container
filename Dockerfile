@@ -1,4 +1,4 @@
-FROM alpine:3.23.3
+FROM alpine:3.23.5
 
 LABEL "org.opencontainers.image.title"="GitOps Container"
 LABEL "org.opencontainers.image.source"="https://github.com/MrTech12/gitops-container"
